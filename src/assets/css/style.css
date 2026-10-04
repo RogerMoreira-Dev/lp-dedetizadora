@@ -525,3 +525,12 @@ h1, h2, h3 { text-wrap: balance; }
   .reentry tbody th, .reentry tbody td { padding: 0; border: 0; }
   .reentry tbody td:last-child { grid-column: 1 / -1; color: var(--muted-l); font-size: 15px; }
 }
+
+/* No celular o texto ocupa a largura toda: o líquido fica mais escuro atrás dele */
+@media (max-width: 960px) {
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgba(9, 11, 8, 0.45) 0%, rgba(9, 11, 8, 0.86) 30%, rgba(9, 11, 8, 0.9) 100%),
+      linear-gradient(0deg, var(--night) 0%, rgba(9, 11, 8, 0) 22%);
+  }
+}
